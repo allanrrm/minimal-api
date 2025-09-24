@@ -3,10 +3,16 @@ using MinimalApi.Dominio.Entidades;
 
 namespace MinimalApi.Dominio.Interfaces;
 
-    
-    public interface IAdministradorServico
-    {
-        Administrador? Login(LoginDTO loginDTO);
-    }
+
+public interface IAdministradorServico
+{
+    Administrador? Login(LoginDTO loginDTO);
+    Administrador? Incluir(Administrador administrador);
+
+    List<Administrador> ListarTodos(int? pagina);
+
+    Administrador? BuscarPorId(int id);
+
+}
 
 
