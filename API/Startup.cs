@@ -100,10 +100,14 @@ public class Startup
         app.UseSwagger();
         app.UseSwaggerUI();
 
+        app.UseRouting();
+
+        app.UseCors();
+
         app.UseAuthentication();
         app.UseAuthorization();
 
-        app.UseCors();
+
 
         app.UseEndpoints(endpoints =>
         {
